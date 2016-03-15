@@ -1,0 +1,21 @@
+### Notes
+
+##### make file build obj dir other than src
+```
+    $(OBJ_DEBUG): $(OBJDIR_DEBUG)/%.o: %.cpp
+        $(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c $< -o $@
+
+    $(OBJDIR)/%.o: %.c
+        $(CC) $(CFLAGS) $(CPPFLAGS) -c -o $@ $<
+```
+
+##### git ignore already commit file
+```
+    git rm --cached FILE_PATH
+    update .gitignore
+    git commit -m "We really don't want Git to track this anymore!"
+```
+```
+    git update-index --assume-unchanged <PATH>
+    git update-index --no-assume-unchanged <PATH>
+```

@@ -1,6 +1,8 @@
 ### Notes
 
 ##### make file build obj dir other than src
+
+未测试
 ```
     $(OBJ_DEBUG): $(OBJDIR_DEBUG)/%.o: %.cpp
         $(CXX) $(CFLAGS_DEBUG) $(INC_DEBUG) -c $< -o $@
@@ -10,12 +12,24 @@
 ```
 
 ##### git ignore already commit file
+
+有效方式
 ```
     git rm --cached FILE_PATH
     update .gitignore
     git commit -m "We really don't want Git to track this anymore!"
 ```
+忽略单一大文件
 ```
     git update-index --assume-unchanged <PATH>
     git update-index --no-assume-unchanged <PATH>
+```
+===============================================================================
+##### bash string comparison
+
+注意[]空格
+```
+    if [ "$1" == "list" ];then
+        echo "arg1 is equal to list"
+    fi
 ```

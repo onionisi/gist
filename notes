@@ -57,6 +57,7 @@ bin: $(obj_files)
 
 %.o: %.c
     -mkdir -p $(dir $@)
+    #(-) in front of the rule tells make to ignore the return value of the mkdir command
     gcc $(CFLAGS) $< -c -o $@
 
 .PHONY: all clean
@@ -64,3 +65,20 @@ bin: $(obj_files)
 clean:
     rm -rf $(obj_files) $(dir $(obj_files)) bin
 ```
+
+===============================================================================
+##### makefile VPATH vpath
+
+- VPATH 
+
+    指定依赖文件的搜索路径, 使用空格或者冒号（:）将多个目录分开。
+    make 搜索的目录顺序按照“VPATH”定义顺序进行（当前目录永远是第一搜索目录）
+
+- vpath
+
+    1、vpath PATTERN DIRECTORIES 
+        为符合模式“PATTERN”的文件指定搜索目录“DIRECTORIES”。类“VPATH” 
+    2、vpath PATTERN 
+        清除之前为符合模式“PATTERN”文件设置的搜索路径
+    3、vpath
+        清除所有已被设置的文件搜索路径。

@@ -99,3 +99,20 @@ clean:
         * 资源列表, e.g: 产品列表, url -> /products , verb -> GET
         * 资源关联关系, e.g: 收藏产品, url -> /products/{id}/star , verb -> PUT
         * 资源关联关系, e.g: 删除收藏产品, url -> /products/{id}/star , verb -> DELETE
+
+===============================================================================
+##### gnupg
+
+- 生产密钥查看上传
+```
+    gpg --gen-key
+    gpg --list-keys
+    gpg --keyserver server -send-keys pub_hashid
+```
+
+- 撤销密钥
+```
+    gpg --gen-revoke iamyangchong@gmail.com > old.rev(delete colon)
+    gpg --import old.rev
+    gpg --keyserver server -send-keys pub_hashid
+```

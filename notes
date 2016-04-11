@@ -129,3 +129,12 @@ clean:
     ssh user@host "tar czf - data" | tar xvzf - -C dir
 ```
 
+===========================================================================
+##### nohup & setsid
+
+- `&` just bg, when shell exit the 'SIGHUP' will kill it.
+- `nohop` runs specificed program with the 'SIGHUP' signal ignored.
+  and redirects the output to the file nohup.out
+- `setsid` run a program in a new session, PPID 1
+- (program &) subshell ignore 'HUP', PPID 1
+- disown -h jobspec, just ignore 'HUP'

@@ -138,3 +138,12 @@ clean:
 - `setsid` run a program in a new session, PPID 1
 - (program &) subshell ignore 'HUP', PPID 1
 - disown -h jobspec, just ignore 'HUP'
+
+===========================================================================
+##### git push
+
+```
+    git push origin local_branch:remote_branch
+    git pull origin remote_branch:local_branch
+    git push origin :remote_branch    # delete remote_branch
+```

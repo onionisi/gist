@@ -1,0 +1,38 @@
+### Docker Train
+QQ/Wechat:48522767
+
+##### Namespace
+
+害怕fork炸弹，ulimit不能限制其进程数，而是用户的
+
+##### cgroups
+
+top不精准，user cmd,如果是多个用户，没有意义，容器还是cgroups以及任务控制
+
+##### device mapper VS aufs
+
+kernel update cos device 
+
+##### save
+
+clean tmp, make image small
+
+##### storage
+
+- sys vol: autfs, btrfs, device mapper, vfs, overlays
+- data vol: LVM
+
+##### container network
+
+veth pair one direct each (hook)
+
+bridge
+
+##### DockerFile
+
+RUN --cache
+
+#### SDN
+
+Docker Bridge/Flannel/Weave/Calico
+                            隔离颗粒度最细，转发性能也最好

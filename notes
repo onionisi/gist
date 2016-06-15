@@ -123,6 +123,7 @@ clean:
 - tar 注意Pp
     * cP : contain absolute name
     * xp : preserve permission
+    * --exclude "PATH"(without '/' at the end)
 
 ```
     tar czf - data | ssh user@host "tar xf - -C dir"

@@ -183,3 +183,30 @@ if remote==localhost; remote= ssh hostname
   sudo -u postgres createdb -O chong testdb
   psql -U chong -d testdb -h 127.0.0.1 -p 5432 # psql testdb
 ```
+
+
+===========================================================================
+##### sed
+
+```
+  sed -i "s/old/new/g" `ag 'old' -rl dir`
+```
+
+===========================================================================
+##### django debug
+
+python2.7/site-packages/django/core/handlers/base.py
+
+```
+  #============= Code start ========== by chang
+  print "---------- HTTP 500 Error Msg ---------- "
+  print exc_info
+  import traceback
+  print traceback.format_exc()
+  print "----------------------------------------"
+  #============= Code end =========
+        
+  if settings.DEBUG:
+      return debug.technical_500_response(request, *exc_info)
+        
+```

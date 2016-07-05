@@ -210,3 +210,13 @@ python2.7/site-packages/django/core/handlers/base.py
       return debug.technical_500_response(request, *exc_info)
         
 ```
+
+===========================================================================
+##### public ip query (without limit)
+
+http://tbip.alicdn.com/api/queryip
+
+===========================================================================
+##### 7z unextract with spec path
+
+`7z x demo.7z -o$PATH`

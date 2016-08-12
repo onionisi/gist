@@ -220,3 +220,10 @@ http://tbip.alicdn.com/api/queryip
 ##### 7z unextract with spec path
 
 `7z x demo.7z -o$PATH`
+
+===========================================================================
+##### git add trick
+
+git add -A  stages All
+git add .   stages new and modified, without deleted
+git add -u  stages deleted and modified, without new

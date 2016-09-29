@@ -227,3 +227,9 @@ http://tbip.alicdn.com/api/queryip
 git add -A  stages All
 git add .   stages new and modified, without deleted
 git add -u  stages deleted and modified, without new
+
+===========================================================================
+##### python false value
+
+假 False，空的字符串''，数字0，空的容器[] () {} set(), None
+真 True，任意非空字符串，任意非0数字，任意非空容器，其他任意非False

@@ -233,3 +233,25 @@ git add -u  stages deleted and modified, without new
 
 假 False，空的字符串''，数字0，空的容器[] () {} set(), None
 真 True，任意非空字符串，任意非0数字，任意非空容器，其他任意非False
+
+===========================================================================
+##### spacemacs evil ctrl-z
+
+ctrl-z toggle the evil mode
+C-x-C-z suspend emacs
+
+===========================================================================
+##### notification
+
+发送消息非常简单，只需要向以下URL发一个GET或者POST请求：
+
+```
+`http://sc.ftqq.com/SCU7864T718c0561b24946966a2ec36564a6528258fff490ce6e2.send`
+
+接受两个参数：
+
+text：消息标题，最长为256，必填。
+desp：消息内容，最长64Kb，可空，支持MarkDown。
+```
+
+绑定微信

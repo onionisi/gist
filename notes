@@ -255,3 +255,13 @@ desp：消息内容，最长64Kb，可空，支持MarkDown。
 ```
 
 绑定微信
+
+===========================================================================
+##### YCM compilation database
+
+YCM looks for a file named compile_commands.json in the directory of the opened file or in any directory above it in the hierarchy (recursively); when the file is found, it is loaded. 
+
+- CMake: add -DCMAKE_EXPORT_COMPILE_COMMANDS=ON when configuring (or add set( CMAKE_EXPORT_COMPILE_COMMANDS ON ) to CMakeLists.txt) and copy or symlink the generated database to the root of your project.
+- Ninja: check out the compdb tool (-t compdb) in its docs.
+- GNU Make: check out Bear
+- Others: check out .ycm_extra_conf.py below
